@@ -1,0 +1,5 @@
+sqlite3
+pandas as pd
+Flask, render_template
+sqlite3
+os
