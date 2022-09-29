@@ -24,7 +24,7 @@ def index():
     print('patientListSql:', patientListSql)
     return render_template('index.html', listPatients=patientListSql) 
 
-@app.route('/bootstrap')
+@app.route('/patients')
 def bootstrap():
     conn = get_db_connection()
     patientListSql = conn.execute('SELECT * FROM patient_table').fetchall()
@@ -36,4 +36,20 @@ def bootstrap():
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=80)
 
+##TERMINAL COMMANDS ON GCP 
+
+#sudo apt-get update
+#sudo apt install python3-pip
+#pip3 install flask (if this doesnt work, try sudo pip3 install flask)
+#pip3 install pandas (if this doesnt work, try sudo pip3 install pandas)
+#sudo apt-get install git
+#git clone (Github Repo link)
+#ls on terminal is to see where we're within the files
+#cd (file) is to redirect us to the file we need
+
+#sudo python3 (name of file we want to run in which our flask app lives)
+
+##IN ORDER TO LET OUR APP RUN CONTINOUSLY
+#sudo nohup python3 notebook.py > log.txt 2>&1 
+#sudo kill -9??? (not sure tho)
 
