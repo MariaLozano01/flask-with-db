@@ -53,3 +53,4 @@ if __name__ == '__main__':
 #sudo nohup python3 notebook.py > log.txt 2>&1 
 #sudo kill -9??? (not sure tho)
 
+#rm -rf NAME OF THE GLIT THAT WAS CLONED --> in order to remove a git clone that already exists
